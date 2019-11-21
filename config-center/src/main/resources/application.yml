@@ -1,0 +1,47 @@
+
+#spring.application.name=config-center-server
+
+#server.port=3031
+
+#eureka.client.serviceUrl.defaultZone=http://localhost:7001/eureka/
+
+server:
+  port: 3031
+  tomcat:
+    uri-encoding: utf-8
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7001/eureka/
+
+spring:
+  application:
+    name: config-center-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/wilson88/spring_cloud_demo #配置文件所在仓库
+          username:  #登录账号
+          password:  #登录密码
+          default-label: master #配置文件分支
+          search-paths: spring_clound_in_action/config-repo  #配置文件所在根目录
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
+
+
+#server.tomcat.uri-encoding=utf-8
+
+#  spring.http.encoding.charset=utf-8
+
+#  spring.http.encoding.enabled=true
+
+#  spring.http.encoding.force=true
+
+

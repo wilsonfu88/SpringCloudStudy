@@ -1,0 +1,7 @@
+
+server.port=3032
+
+spring.application.name=config-client
+
+
+eureka.client.serviceUrl.defaultZone=http://localhost:7001/eureka/
