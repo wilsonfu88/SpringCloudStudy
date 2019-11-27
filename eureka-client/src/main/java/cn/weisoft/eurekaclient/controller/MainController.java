@@ -62,7 +62,8 @@ public class MainController {
     }
 
 
+    @GetMapping("/error")
     public String error(){
-        return "熔断降级";
+        return "熔断降级处理";
     }
 }

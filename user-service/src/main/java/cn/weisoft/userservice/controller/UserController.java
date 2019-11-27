@@ -27,7 +27,8 @@ public class UserController {
     public UserPo getUserPo(@PathVariable("id")Long id){
         ServiceInstance service  = discoveryClient.getInstances("USERSERVICE").get(0);
 
-        log.info("Host:" + service.getHost() + " instanceId:" + service.getInstanceId());
+        log.info("serviceId:" + service.getServiceId() + "Host:" + service.getHost()
+                + " port:" + service.getPort());
 
         UserPo user = new UserPo();
 
